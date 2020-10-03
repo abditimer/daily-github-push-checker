@@ -6,9 +6,10 @@ This python script, deployed on AWS Lambda, checks on a daily basis whether you 
 ![overview img](/overview.png)
 
 The simple overview of this system:
-1. The Code gets started by AWS CloudWatch on a daily basis
+1. The Code gets triggered by AWS CloudWatch on a daily basis
 1. AWS runs the serverless AWS Lambda code
-1. This runs our python code, which checks the last time we pushed to our github repo
+1. This runs our python code
+    1. It checks the last time we pushed to our github repo using the **Github API**
 1. If we have pushed in the last 24 hours
     1. The system does not do anything - Good job!
 1. If you have not pushed code in the last 24 hours
